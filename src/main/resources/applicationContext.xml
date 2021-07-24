@@ -12,16 +12,22 @@
           class="org.example.RockMusic">
 
     </bean>
-    <bean id="classicMusicBean"
+    <bean id="tranceMusicBean"
           class="org.example.TranceMusic">
 
     </bean>
-    <bean id="tranceMusicBean"
-          class="org.example.ClassicalMusic">
+    <bean id="classicMusicBean"
+          class="org.example.ClassicalMusic"
+    init-method="doMyInit"
+    destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic"
+    >
 
     </bean>
     <bean id="musicPlayer"
-          class="org.example.MusicPlayer">
+          class="org.example.MusicPlayer"
+    init-method="init"
+    scope="prototype">
         <property name="musicList">
             <list>
                 <ref bean="rockMusicBean" />

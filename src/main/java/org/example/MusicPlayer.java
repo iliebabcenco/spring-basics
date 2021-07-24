@@ -6,6 +6,10 @@ import java.util.List;
 public class MusicPlayer {
     private List<Music> musicList = new ArrayList<>();
 
+    private void init() {
+        System.out.println("music player initialization for " + this);
+    }
+
     public List<Music> getMusicList() {
         return musicList;
     }
