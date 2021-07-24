@@ -20,6 +20,14 @@ public class TestSpring {
         Computer computer = context.getBean("computer", Computer.class);
         System.out.println(computer.toString());
 
+        ClassicalMusic classicalMusic = context.getBean("classicalMusic", ClassicalMusic.class);
+        ClassicalMusic classicalMusic2 = context.getBean("classicalMusic", ClassicalMusic.class);
+        System.out.println(classicalMusic == classicalMusic2);
+
+        TranceMusic tranceMusic = context.getBean("tranceMusic", TranceMusic.class);
+        TranceMusic tranceMusic2 = context.getBean("tranceMusic", TranceMusic.class);
+        System.out.println(tranceMusic == tranceMusic2);
+
         context.close();
     }
 }

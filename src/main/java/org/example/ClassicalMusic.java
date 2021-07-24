@@ -1,11 +1,15 @@
 package org.example;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
+
 public class ClassicalMusic implements Music{
 
     private List<String> musicList = new ArrayList<>();
@@ -16,7 +20,7 @@ public class ClassicalMusic implements Music{
         musicList.add("classical song nr. 3");
     }
 
-    private ClassicalMusic() {
+    public ClassicalMusic() {
         System.out.println("doing my constructor in classical music");
     }
 
@@ -25,9 +29,11 @@ public class ClassicalMusic implements Music{
         return new ClassicalMusic();
     }
 
+    @PostConstruct
     public void doMyInit() {
         System.out.println("doing my initialization");
     }
+    @PreDestroy
     public void doMyDestroy() {
         System.out.println("doing my destroy");
     }

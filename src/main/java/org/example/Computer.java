@@ -18,6 +18,9 @@ public class Computer {
     public String toString() {
         return "Computer " +
                 id +
-                ", musicPlayer plays=" + musicPlayer.playMusic(MusicType.TRANCE);
+                ", musicPlayer name "+
+                musicPlayer.getName() +" with volume: "+
+                musicPlayer.getVolume()+
+        " plays=" + musicPlayer.playMusic(MusicType.TRANCE);
     }
 }
