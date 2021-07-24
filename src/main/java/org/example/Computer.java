@@ -16,8 +16,8 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer{" +
-                "id=" + id +
-                ", musicPlayer plays=" + musicPlayer.playMusic();
+        return "Computer " +
+                id +
+                ", musicPlayer plays=" + musicPlayer.playMusic(MusicType.TRANCE);
     }
 }
