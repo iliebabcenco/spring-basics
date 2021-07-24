@@ -8,7 +8,6 @@ import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
 
 public class ClassicalMusic implements Music{
 
@@ -29,11 +28,9 @@ public class ClassicalMusic implements Music{
         return new ClassicalMusic();
     }
 
-    @PostConstruct
     public void doMyInit() {
         System.out.println("doing my initialization");
     }
-    @PreDestroy
     public void doMyDestroy() {
         System.out.println("doing my destroy");
     }

@@ -3,12 +3,10 @@ package org.example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Computer {
     private int id;
     private MusicPlayer musicPlayer;
 
-    @Autowired
     public Computer(MusicPlayer musicPlayer) {
         this.id = 1;
         this.musicPlayer = musicPlayer;
@@ -21,6 +19,6 @@ public class Computer {
                 ", musicPlayer name "+
                 musicPlayer.getName() +" with volume: "+
                 musicPlayer.getVolume()+
-        " plays=" + musicPlayer.playMusic(MusicType.TRANCE);
+        " plays=" + musicPlayer.playMusic();
     }
 }

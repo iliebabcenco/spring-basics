@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Component
 public class TranceMusic implements Music{
     private List<String> musicList = new ArrayList<>();
 
